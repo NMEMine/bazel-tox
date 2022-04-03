@@ -6,6 +6,6 @@ tox_test(
         ":foo.py",
         ":test/test_foo.py",
     ],
-    requirements = ":requirements.txt",
+    requirements = [":requirements.txt"],
     tox_ini = ":tox.ini",
 )

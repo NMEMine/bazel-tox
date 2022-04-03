@@ -18,7 +18,7 @@ tox_test = rule(
     attrs = {
         "srcs": attr.label_list(allow_files = [".py"]),
         "tox_ini": attr.label(allow_single_file = [".ini"], mandatory = True),
-        "requirements": attr.label(allow_single_file = [".txt"]),
+        "requirements": attr.label_list(allow_files = [".txt"]),
         "_tox_bin": attr.label(
             cfg = "host",
             executable = True,
